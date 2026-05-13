@@ -55,7 +55,7 @@ def webhook3():
             data = doc.to_dict()
             if rate == data["rate"]:
                 result += "片名：" + data["title"] + "\n"
-                result += "介紹：" + data["introduce"] + "\n\n"
+                result += "介紹：" + data["hyperlink"] + "\n\n"
         info += result
     return make_response(jsonify({"fulfillmentText": info}))
 
